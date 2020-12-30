@@ -153,20 +153,19 @@ def get_sleep_time():
 if __name__ == "__main__":
     # 最大运行出错次数
     fail_num = 3
-    while 1:
-        while fail_num > 0:
-            try:
-                # 执行一键修改步数
-                XiaomiSport( id , key , random.randint(22000,25000)).one_click_change_step()
-                break
-            except Exception as e:
-                print('运行出错，原因：%s' % e)
-                fail_num -= 1
-                if fail_num == 0:
-                    print('运行出错，修改步数失败')
-        # 重置运行出错次数
-        fail_num = 3
-        # 获取睡眠时间
-        #sleep_time = get_sleep_time()
-        # 睡眠到下次执行时间
-        #time.sleep(sleep_time)
+    while fail_num > 0:
+        try:
+            # 执行一键修改步数
+            XiaomiSport( id , key , random.randint(22000,25000)).one_click_change_step()
+            break
+        except Exception as e:
+            print('运行出错，原因：%s' % e)
+            fail_num -= 1
+            if fail_num == 0:
+                print('运行出错，修改步数失败')
+    # 重置运行出错次数
+    #fail_num = 3
+    # 获取睡眠时间
+    #sleep_time = get_sleep_time()
+    # 睡眠到下次执行时间
+    #time.sleep(sleep_time)
