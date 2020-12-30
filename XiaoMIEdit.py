@@ -167,6 +167,6 @@ if __name__ == "__main__":
         # 重置运行出错次数
         fail_num = 3
         # 获取睡眠时间
-        sleep_time = get_sleep_time()
+        #sleep_time = get_sleep_time()
         # 睡眠到下次执行时间
-        time.sleep(sleep_time)
+        #time.sleep(sleep_time)
