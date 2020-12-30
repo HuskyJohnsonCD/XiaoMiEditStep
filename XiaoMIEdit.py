@@ -6,6 +6,18 @@ import re
 import random
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 class XiaomiSport:
     def __init__(self, phone, password, step):
         # 手机号
@@ -145,7 +157,7 @@ if __name__ == "__main__":
         while fail_num > 0:
             try:
                 # 执行一键修改步数
-                XiaomiSport('19930577852', 'Xiaomi9429', random.randint(22000,25000)).one_click_change_step()
+                XiaomiSport('ID', 'KEY', random.randint(22000,25000)).one_click_change_step()
                 break
             except Exception as e:
                 print('运行出错，原因：%s' % e)
