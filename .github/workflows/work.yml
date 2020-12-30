@@ -36,8 +36,8 @@ jobs:
         cp XiaoMIEdit.py xiaomi2.py
         echo $ID >id.txt
         echo $KEY > key.txt
-        sed -i '10 r id.txt' xiaomi2.py
-        sed -i '12 r key.txt' xiaomi2.py
+        sed -i '12 r id.txt' xiaomi2.py
+        sed -i '15 r key.txt' xiaomi2.py
     - name: Test Api #Api调用
       run: | 
         echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
