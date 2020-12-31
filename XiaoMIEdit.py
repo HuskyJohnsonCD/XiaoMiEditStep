@@ -152,7 +152,7 @@ def get_sleep_time():
 
 if __name__ == "__main__":
     # 最大运行出错次数
-    time.sleep(random.randint(20,1800))
+    time.sleep(random.randint(20,900))
     fail_num = 3
     while fail_num > 0:
         try:
