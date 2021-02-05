@@ -18,6 +18,24 @@ import random
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class XiaomiSport:
     def __init__(self, phone, password, step):
         # 手机号
