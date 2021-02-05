@@ -51,11 +51,11 @@ jobs:
         echo $KEY3 > key3.txt
         
         sed -i '10r id1.txt' xiaomi2.py
-        sed -i '11r  key1.txt' xiaomi2.py
+        sed -i '12r  key1.txt' xiaomi2.py
         sed -i '14r id2.txt' xiaomi2.py
-        sed -i '15r  key2.txt' xiaomi2.py
+        sed -i '16r  key2.txt' xiaomi2.py
         sed -i '18r id3.txt' xiaomi2.py
-        sed -i '19r  key3.txt' xiaomi2.py
+        sed -i '20r  key3.txt' xiaomi2.py
     - name: Test Api #Api调用
       run: | 
         echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
@@ -63,8 +63,12 @@ jobs:
     - name: Delete secrets config #删除机密
       run: | 
         rm -f xiaomi2.py
-        rm -f id.txt
-        rm -f key.txt    
+        rm -f id1.txt
+        rm -f key1.txt
+        rm -f id2.txt
+        rm -f key2.txt  
+        rm -f id3.txt
+        rm -f key3.txt  
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
