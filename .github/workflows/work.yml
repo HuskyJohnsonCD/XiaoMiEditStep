@@ -30,14 +30,32 @@ jobs:
         pip install requests
     - name: Read config from secrets  #读取机密
       env: 
-        ID: ${{ secrets.ID }} # secrets_id 提供
-        KEY: ${{ secrets.KEY }} # secrets_key 提供
+        ID1: ${{ secrets.ID1 }} # secrets_id 提供
+        KEY1: ${{ secrets.KEY1 }} # secrets_key 提供
+        
+        ID2: ${{ secrets.ID2 }} # secrets_id 提供
+        KEY2: ${{ secrets.KEY2 }} # secrets_key 提供
+        
+        ID3: ${{ secrets.ID3 }} # secrets_id 提供
+        KEY3: ${{ secrets.KEY3 }} # secrets_key 提供:  
       run: | 
         cp XiaoMIEdit.py xiaomi2.py
-        echo $ID >id.txt
-        echo $KEY > key.txt
-        sed -i '12r id.txt' xiaomi2.py
-        sed -i '15r  key.txt' xiaomi2.py
+        
+        echo $ID1 >id1.txt
+        echo $KEY1 > key1.txt
+        
+        echo $ID2 >id2.txt
+        echo $KEY2 > key2.txt
+        
+        echo $ID3 >id3.txt
+        echo $KEY3 > key3.txt
+        
+        sed -i '10r id1.txt' xiaomi2.py
+        sed -i '11r  key1.txt' xiaomi2.py
+        sed -i '14r id2.txt' xiaomi2.py
+        sed -i '15r  key2.txt' xiaomi2.py
+        sed -i '18r id3.txt' xiaomi2.py
+        sed -i '19r  key3.txt' xiaomi2.py
     - name: Test Api #Api调用
       run: | 
         echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
