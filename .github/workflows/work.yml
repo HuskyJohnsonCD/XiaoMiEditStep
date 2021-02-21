@@ -53,8 +53,8 @@ jobs:
         echo $ID3 >id3.txt
         echo $KEY3 > key3.txt
         
-        echo $ID3 >id4.txt
-        echo $KEY3 > key4.txt
+        echo $ID4 >id4.txt
+        echo $KEY4 > key4.txt
         
         sed -i '10r id1.txt' xiaomi2.py
         sed -i '12r  key1.txt' xiaomi2.py
