@@ -30,14 +30,17 @@ jobs:
         pip install requests
     - name: Read config from secrets  #读取机密
       env: 
-        ID1: ${{ secrets.ID1 }} # secrets_id 提供
-        KEY1: ${{ secrets.KEY1 }} # secrets_key 提供
+        ID1: ${{ secrets.ID1 }} # secrets_id1 提供
+        KEY1: ${{ secrets.KEY1 }} # secrets_key1 提供
         
-        ID2: ${{ secrets.ID2 }} # secrets_id 提供
-        KEY2: ${{ secrets.KEY2 }} # secrets_key 提供
+        ID2: ${{ secrets.ID2 }} # secrets_id2 提供
+        KEY2: ${{ secrets.KEY2 }} # secrets_key2 提供
         
-        ID3: ${{ secrets.ID3 }} # secrets_id 提供
-        KEY3: ${{ secrets.KEY3 }} # secrets_key 提供:  
+        ID3: ${{ secrets.ID3 }} # secrets_id3 提供
+        KEY3: ${{ secrets.KEY3 }} # secrets_key3 提供:  
+        
+        ID4: ${{ secrets.ID4 }} # secrets_id4 提供
+        KEY4: ${{ secrets.KEY4 }} # secrets_key4 提供:
       run: | 
         cp XiaoMIEdit.py xiaomi2.py
         
@@ -50,12 +53,17 @@ jobs:
         echo $ID3 >id3.txt
         echo $KEY3 > key3.txt
         
+        echo $ID3 >id4.txt
+        echo $KEY3 > key4.txt
+        
         sed -i '10r id1.txt' xiaomi2.py
         sed -i '12r  key1.txt' xiaomi2.py
         sed -i '14r id2.txt' xiaomi2.py
         sed -i '16r  key2.txt' xiaomi2.py
         sed -i '18r id3.txt' xiaomi2.py
         sed -i '20r  key3.txt' xiaomi2.py
+        sed -i '22r id4.txt' xiaomi2.py
+        sed -i '24r  key4.txt' xiaomi2.py
     - name: Test Api #Api调用
       run: | 
         echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
@@ -69,6 +77,8 @@ jobs:
         rm -f key2.txt  
         rm -f id3.txt
         rm -f key3.txt  
+        rm -f id4.txt
+        rm -f key4.txt  
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
