@@ -188,7 +188,7 @@ if __name__ == "__main__":
             # 执行一键修改步数
             XiaomiSport( mid1 , mkey1 , random.randint(9000,11000)).one_click_change_step()  #lee
             time.sleep(random.randint(10,40))
-            XiaomiSport( mid2 , mkey2 , random.randint(15000,17000)).one_click_change_step()   #lyl
+            XiaomiSport( mid2 , mkey2 , random.randint(15000,17000)).one_click_change_step()   #lee friends
             time.sleep(random.randint(10,40))
             XiaomiSport( mid3 , mkey3 , random.randint(22000,25000)).one_click_change_step()   #sick
             time.sleep(random.randint(10,40))
