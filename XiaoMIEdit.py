@@ -190,9 +190,9 @@ if __name__ == "__main__":
             time.sleep(random.randint(10,40))
             XiaomiSport( mid2 , mkey2 , random.randint(15000,17000)).one_click_change_step()   #lee friends
             time.sleep(random.randint(10,40))
-            XiaomiSport( mid3 , mkey3 , random.randint(22000,25000)).one_click_change_step()   #sick
+            XiaomiSport( mid3 , mkey3 , random.randint(19000,19900)).one_click_change_step()   #sick
             time.sleep(random.randint(10,40))
-            XiaomiSport( mid4 , mkey4 , random.randint(22000,25000)).one_click_change_step()   #baip
+            XiaomiSport( mid4 , mkey4 , random.randint(19000,19900)).one_click_change_step()   #baip
             break
         except Exception as e:
             print('运行出错，原因：%s' % e)
